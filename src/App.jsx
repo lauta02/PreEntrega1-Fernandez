@@ -1,6 +1,8 @@
-import { useState } from 'react';
-import { Header } from './components/Navbar'; 
-import { ProductList } from './components/ItemListContainer'; 
+import React, { useState } from 'react';
+import Navbar from './components/navbar/NavBar'; 
+import { CartWidget } from './components/cartwidget/CartWidget';
+import { ProductList } from './components/itemlistcontainer/ItemListContainer'; 
+import './App.css';
 
 function App() {
   const [allProducts, setAllProducts] = useState([]);
@@ -8,24 +10,25 @@ function App() {
   const [countProducts, setCountProducts] = useState(0);
 
   return (
-    <>
-      <Header
+    <div>
+      <Navbar />
+      <CartWidget
         allProducts={allProducts}
         setAllProducts={setAllProducts}
         total={total}
-        setTotal={setTotal}
         countProducts={countProducts}
         setCountProducts={setCountProducts}
+        setTotal={setTotal}
       />
       <ProductList
         allProducts={allProducts}
         setAllProducts={setAllProducts}
         total={total}
-        setTotal={setTotal}
         countProducts={countProducts}
         setCountProducts={setCountProducts}
+        setTotal={setTotal}
       />
-    </>
+    </div>
   );
 }
 

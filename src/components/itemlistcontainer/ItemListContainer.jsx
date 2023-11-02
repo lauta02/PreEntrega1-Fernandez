@@ -1,5 +1,5 @@
-import { data } from '../data';
-import '../ItemListContainer.css'; 
+import { data } from '../../data';
+import '../itemlistcontainer/ItemListContainer.css'; 
 
 export const ProductList = ({
   allProducts,

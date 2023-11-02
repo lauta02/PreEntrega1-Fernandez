@@ -35,7 +35,7 @@ export const data = [
 		quantity: 1,
 	},
 	{
-		id: 5,
+		id: 6,
 		img: 'https://www.carscoops.com/wp-content/uploads/2023/10/Kia-K5-Facelift-Korea-1-1024x576.jpg',
 		nameProduct: 'Kia Optima 2023',
 		price: 22000,
