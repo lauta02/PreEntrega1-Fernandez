@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
-import Navbar from './components/navbar/NavBar'; 
-import { CartWidget } from './components/cartwidget/CartWidget';
-import { ProductList } from './components/itemlistcontainer/ItemListContainer'; 
+import Navbar from './components/navbar/NavBar';
+import { ItemListContainer } from './components/ItemListContainer/ItemListContainer';
 import './App.css';
 
 function App() {
@@ -12,7 +11,7 @@ function App() {
   return (
     <div>
       <Navbar />
-      <CartWidget
+      <ItemListContainer
         allProducts={allProducts}
         setAllProducts={setAllProducts}
         total={total}
@@ -20,14 +19,7 @@ function App() {
         setCountProducts={setCountProducts}
         setTotal={setTotal}
       />
-      <ProductList
-        allProducts={allProducts}
-        setAllProducts={setAllProducts}
-        total={total}
-        countProducts={countProducts}
-        setCountProducts={setCountProducts}
-        setTotal={setTotal}
-      />
+      
     </div>
   );
 }

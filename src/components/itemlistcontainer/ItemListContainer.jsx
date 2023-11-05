@@ -1,7 +1,7 @@
 import { data } from '../../data';
-import '../itemlistcontainer/ItemListContainer.css'; 
+import './ItemListContainer.css';
 
-export const ProductList = ({
+export const ItemListContainer = ({
   allProducts,
   setAllProducts,
   countProducts,
@@ -9,9 +9,9 @@ export const ProductList = ({
   total,
   setTotal,
 }) => {
-  const onAddProduct = product => {
-    if (allProducts.find(item => item.id === product.id)) {
-      const updatedProducts = allProducts.map(item =>
+  const onAddProduct = (product) => {
+    if (allProducts.find((item) => item.id === product.id)) {
+      const updatedProducts = allProducts.map((item) =>
         item.id === product.id
           ? { ...item, quantity: item.quantity + 1 }
           : item
@@ -29,7 +29,7 @@ export const ProductList = ({
 
   return (
     <div className='product-list-container'>
-      {data.map(product => (
+      {data.map((product) => (
         <div className='product-item' key={product.id}>
           <figure>
             <img src={product.img} alt={product.nameProduct} />
